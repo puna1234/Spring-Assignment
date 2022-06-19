@@ -69,8 +69,7 @@ public class CouponController {
 	}
 
 	// @RequestMapping(value="/coupons/{couponId}", method=RequestMethod.PUT)
-	@PutMapping(value = "/coupons/{couponId}", consumes = { MediaType.APPLICATION_JSON_VALUE,
-			MediaType.APPLICATION_XML_VALUE })
+	@PutMapping(value = "/coupons/{couponId}")
 	public ResponseEntity<String> updateCoupon(@PathVariable("couponId") int couponId,
 			@RequestBody CouponDto couponDto) {
 		couponService.updateCoupon(couponId, couponDto);
