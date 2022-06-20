@@ -22,9 +22,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.zensar.spring.demo.Dto.CouponDto;
 import com.zensar.spring.demo.services.CouponService;
 
-
-
-
 @RestController
 @RequestMapping(value = "/coupon-api", produces = { MediaType.APPLICATION_JSON_VALUE,
 		MediaType.APPLICATION_XML_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE,
@@ -40,7 +37,8 @@ public class CouponController {
 		return new ResponseEntity<CouponDto>(couponService.getCoupon(couponId), HttpStatus.OK);
 
 	}
-	//http://localhost:1111/coupon-api/coupons?pageNumber=0&pageSize=5&sortBy=couponCode&dir=DESC
+
+	// http://localhost:1111/coupon-api/coupons?pageNumber=0&pageSize=5&sortBy=couponCode&dir=DESC
 	// @RequestMapping("/coupons")
 	@GetMapping(value = { "/coupons", "/listOfCoupons" })
 	public ResponseEntity<List<CouponDto>> getAllCoupons(
