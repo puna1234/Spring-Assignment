@@ -8,9 +8,11 @@ import javax.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 @Data
 @NoArgsConstructor
 public class Coupon {
+	
 	private int couponId;
 	private String couponCode;
 	private Double discount;

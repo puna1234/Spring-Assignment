@@ -19,7 +19,7 @@ public class Product {
 	private String productName;
 	private String discription;
 	private Double price;
-//@Transient
+	@Transient
 	private String couponCode;
 
 	public Product() {
